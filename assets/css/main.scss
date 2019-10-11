@@ -1,0 +1,15 @@
+$darkest-color: #212121;
+$dark-color: #1b1b1b;
+$light-color: #bdbdbd;
+$lightest-color: #ffffff;
+$primary-color: #ffeb3b;
+$primary-lighter-color: #ffffa8;
+
+@import "base";
+
+@import "partials/app";
+@import "partials/header";
+@import "partials/pagination";
+@import "partials/post";
+@import "partials/posts-list";
+@import "partials/tag";

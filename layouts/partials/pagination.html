@@ -1,0 +1,27 @@
+{{ with $.Paginator }}
+{{ if gt .TotalPages 1 }}
+<ul class="pagination">
+  {{ with .Prev }}
+  <li class="pagination__item">
+    <a class="pagination__link" href="{{ .URL }}">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </a>
+  </li>
+  {{ end }}
+  {{ range .Pagers }}
+  <li class="pagination__item{{ if eq .PageNumber $.Paginator.PageNumber }} active{{ end }}">
+    <a class="pagination__link" href="{{ .URL }}">
+      {{ .PageNumber }}
+    </a>
+  </li>
+  {{ end }}
+  {{ with .Next }}
+  <li class="pagination__item">
+    <a class="pagination__link" href="{{ .URL }}">
+      <ion-icon name="arrow-round-forward"></ion-icon>
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

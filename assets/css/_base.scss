@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background: $dark-color;
+  color: $light-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hepta Slab", serif;
+  color: $lightest-color;
+}
+
+a {
+  color: $primary-color;
+  transition: color 0.35s;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-lighter-color;
+  }
+}
+
+code {
+  font-family: monospace, monospace;
+  font-size: 1em;
+  color: rgba($light-color, 0.8);
+}
+
+pre {
+  code {
+    font-size: 0.8em;
+  }
+  overflow: auto;
+}
+
+::selection {
+  background: rgba($light-color, 0.25);
+}
+::-moz-selection {
+  background: rgba($light-color, 0.25);
+}

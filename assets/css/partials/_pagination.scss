@@ -1,0 +1,25 @@
+.pagination {
+  display: block;
+  list-style: none;
+  padding: 0;
+  font-size: 0.8em;
+  text-align: center;
+  margin: 3em 0;
+
+  .pagination__link {
+    display: block;
+    padding: 0.285em 0.8em;
+  }
+
+  .pagination__item {
+    display: inline-block;
+
+    &.active {
+      .pagination__link {
+        color: $darkest-color;
+        border-radius: 2em;
+        background: $primary-color;
+      }
+    }
+  }
+}

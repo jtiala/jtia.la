@@ -1,0 +1,16 @@
+.post {
+  .post__title {
+    color: $lightest-color;
+  }
+
+  .post__content {
+    pre {
+      border-left: 0.4em solid rgba($primary-color, 0.8);
+      padding-left: 1em;
+    }
+  }
+
+  .post__meta {
+    font-size: 0.8em;
+  }
+}
