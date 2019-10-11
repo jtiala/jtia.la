@@ -15,7 +15,7 @@ disqusShortname = "jtiala"
     icon = "logo-github"
     url = "https://github.com/jtiala"
   [[params.social]]
-    name = "twitter"
+    name = "Twitter"
     icon = "logo-twitter"
     url = "https://twitter.com/tjiala"
   [[params.social]]
