@@ -4,14 +4,14 @@
       <h1 class ="post__title">{{ .Title }}</h1>
       <div class="post__meta">
         <div>
-          <ion-icon name="calendar"></ion-icon> {{ .PublishDate.Format "Jan 2, 2006" }}
+          <ion-icon name="calendar"></ion-icon>&nbsp;{{ .PublishDate.Format "Jan 2, 2006" }}
         </div>
         <div>
-          <ion-icon name="time"></ion-icon> {{ .ReadingTime }} min read
+          <ion-icon name="time"></ion-icon>&nbsp;{{ .ReadingTime }} min read
         </div>
         {{- with .Params.tags -}}
         <div>
-          <ion-icon name="pricetag"></ion-icon>
+          <ion-icon name="pricetag"></ion-icon>&nbsp;
           {{ range . -}}
             {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) -}}
               <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
