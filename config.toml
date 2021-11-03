@@ -3,7 +3,6 @@ title = "jtia.la"
 languageCode = "en-us"
 paginate = 5
 googleAnalytics = "UA-107120242-1"
-disqusShortname = "jtiala"
 
 [params]
   avatar = "avatar.jpg"
