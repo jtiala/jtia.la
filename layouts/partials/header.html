@@ -1,7 +1,12 @@
 <header class="header">
-  <a href="{{ .Site.BaseURL }}"><img class="header__avatar" src="{{ .Site.Params.avatar | relURL }}" alt="{{ .Site.Params.author }}" /></a>
   <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
-  <p>{{ .Site.Params.description }}</p>
+  <a href="{{ .Site.BaseURL }}"><img class="header__avatar" src="{{ .Site.Params.avatar | relURL }}" alt="{{ .Site.Params.author }}" /></a>
+  <div class="header__author">
+    <span>{{ .Site.Params.author }}</span>
+    <span>
+      <small>{{ .Site.Params.author_title }}</small>
+    </span>
+  </div>
   <div class="header__social">
     {{ range .Site.Params.social }}
       <a target="_blank" href="{{ .url }}" rel="noreferrer noopener" title="{{ .name }}"><ion-icon name="{{ .icon }}"></ion-icon></a>

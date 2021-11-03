@@ -1,9 +1,9 @@
 {{ define "main" }}
   {{ partial "header.html" $ }}
-  <main class="app">
+  <main class="main">
     <article class="post">
       <header class="post__header">
-        <h1 class ="post__title">{{ .Title }}</h1>
+        <h2 class ="post__title">{{ .Title }}</h2>
         <div class="post__meta">
           <div>
             <ion-icon name="calendar"></ion-icon>&nbsp;{{ .PublishDate.Format "Jan 2, 2006" }}
