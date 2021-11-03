@@ -8,7 +8,7 @@ disqusShortname = "jtiala"
 [params]
   avatar = "avatar.jpg"
   author = "Joonas Tiala"
-  description = "Hello. My name is Joonas and this is my blog."
+  description = "Hello. My name is Joonas."
 
   [[params.social]]
     name = "GitHub"
