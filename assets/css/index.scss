@@ -7,7 +7,6 @@ $primary-lighter-color: #ffffa8;
 
 @import "base";
 
-@import "partials/app";
 @import "partials/header";
 @import "partials/pagination";
 @import "partials/post";
@@ -16,15 +15,18 @@ $primary-lighter-color: #ffffa8;
 
 .hero {
   height: 100%;
-  padding: 2.5em;
   background: $dark-color;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   h1 {
+    font-size: 2em;
+    line-height: 1em;
+    margin: 0 0 1em 0;
+
     a {
       color: $lightest-color;
 
@@ -41,6 +43,12 @@ $primary-lighter-color: #ffffa8;
     border: 0.5rem solid $primary-color;
   }
 
+  .hero__name {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
   .hero__social {
     font-size: 2em;
     color: $lightest-color;
@@ -48,5 +56,16 @@ $primary-lighter-color: #ffffa8;
     a {
       margin: 0 0.1em;
     }
+  }
+}
+
+.main {
+  padding: 1em 2em;
+}
+
+@media (min-width: 940px) {
+  .main {
+    max-width: 65rem;
+    margin-left: 20rem;
   }
 }
