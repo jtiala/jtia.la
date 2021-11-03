@@ -7,7 +7,7 @@ googleAnalytics = "UA-107120242-1"
 [params]
   avatar = "avatar.jpg"
   author = "Joonas Tiala"
-  description = "Hello. My name is Joonas."
+  description = "Joonas Tiala - Software Developer"
 
   [[params.social]]
     name = "GitHub"
