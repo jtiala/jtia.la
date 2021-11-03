@@ -13,3 +13,40 @@ $primary-lighter-color: #ffffa8;
 @import "partials/post";
 @import "partials/posts-list";
 @import "partials/tag";
+
+.hero {
+  height: 100%;
+  padding: 2.5em;
+  background: $dark-color;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    a {
+      color: $lightest-color;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .hero__avatar {
+    max-width: 15rem;
+    max-height: 15rem;
+    border-radius: 100%;
+    border: 0.5rem solid $primary-color;
+  }
+
+  .hero__social {
+    font-size: 2em;
+    color: $lightest-color;
+
+    a {
+      margin: 0 0.1em;
+    }
+  }
+}

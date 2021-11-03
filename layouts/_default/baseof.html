@@ -16,11 +16,8 @@
     {{ template "_internal/opengraph.html" . }}
   </head>
   <body>
-    {{ partial "header.html" $ }}
-    <main class="app">
-      {{ block "main" . }}
-        {{ .Content }}
-      {{ end }}
-    </main>
+    {{ block "main" . }}
+      {{ .Content }}
+    {{ end }}
   </body>
 </html>
