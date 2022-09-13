@@ -4,9 +4,9 @@
     {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
       <li class="latest-posts__item">
         <article class="latest-posts__post">
-          <h2 class="latest-posts__post-title">
+          <h3 class="latest-posts__post-title">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h2>
+          </h3>
           <div class="latest-posts__post-meta">
             <div class="latest-posts__post-date">
               <ion-icon name="calendar"></ion-icon>
@@ -18,7 +18,7 @@
             {{ with .Params.tags }}
               <div class="latest-posts__post-tags">
                 <ion-icon name="pricetag"></ion-icon>
-                <h2 class="sr-only">Tags</h2>
+                <h4 class="sr-only">Tags</h4>
                 <ul>
                   {{ range . }}
                     {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
