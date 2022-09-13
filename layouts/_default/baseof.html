@@ -16,8 +16,16 @@
     {{ template "_internal/opengraph.html" . }}
   </head>
   <body>
-    {{ block "main" . }}
-      {{ .Content }}
-    {{ end }}
+    <main class="{{ if .IsHome }}homepage{{ else }}main{{ end }}">
+      {{ if (not .IsHome) }}
+        {{ partial "breadcrumb.html" . }}
+      {{ end }}
+      {{ block "main" . }}
+        {{ .Content }}
+      {{ end }}
+      {{ if (not .IsHome) }}
+        {{ partial "sidebar.html" . }}
+      {{ end }}
+    </main>
   </body>
 </html>

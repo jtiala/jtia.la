@@ -1,24 +1,20 @@
 {{ define "main" }}
-  <main class="main">
-    {{ partial "breadcrumb.html" . }}
-    <article class="terms">
-      <h1 class="terms__title">{{ .Title }}</h1>
-      <ul class="terms__list">
-        {{ range .Data.Terms.ByCount }}
-          <li class="terms__item">
-            <a class="terms__item-title" href="{{ .Page.Permalink }}">
-              {{ .Page.Title }}
-            </a>
-            {{ .Count }}
-            {{ if eq .Count 1 }}
-              post
-            {{ else }}
-              posts
-            {{ end }}
-          </li>
-        {{ end }}
-      </ul>
-    </article>
-  </main>
-  {{ partial "sidebar.html" . }}
+  <article class="terms">
+    <h1 class="terms__title">{{ .Title }}</h1>
+    <ul class="terms__list">
+      {{ range .Data.Terms.ByCount }}
+        <li class="terms__item">
+          <a class="terms__item-title" href="{{ .Page.Permalink }}">
+            {{ .Page.Title }}
+          </a>
+          {{ .Count }}
+          {{ if eq .Count 1 }}
+            post
+          {{ else }}
+            posts
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </article>
 {{ end }}

@@ -18,7 +18,11 @@
       {{ with .Page.Params.tags }}
         <div class="post__tags">
           <ion-icon name="pricetag"></ion-icon>
-          <h2 class="sr-only">Tags</h2>
+          {{ if $.preview }}
+            <h3 class="sr-only">Tags</h3>
+          {{ else }}
+            <h2 class="sr-only">Tags</h2>
+          {{ end }}
           <ul>
             {{ range . }}
               {{ with $.Page.Site.GetPage (printf "/%s/%s" "tags" . ) }}
@@ -32,13 +36,13 @@
       {{ end }}
     </div>
   </header>
-  <main class="post__content">
+  <div class="post__content">
     {{ if .preview }}
       <p>{{ .Page.Summary }}</p>
     {{ else }}
       {{ .Page.Content }}
     {{ end }}
-  </main>
+  </div>
   {{ if (and (isset .Page.Params "external_site") (isset .Page.Params "external_link")) }}
     <footer class="post__read-link">
       See the full post in

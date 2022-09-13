@@ -1,6 +1,4 @@
 {{ define "main" }}
-  <main class="homepage">
-    {{ partial "hero.html" (dict "Page" . "homepage" true) }}
-    {{ partial "latest-posts.html" . }}
-  </main>
+  {{ partial "hero.html" (dict "Page" . "homepage" true) }}
+  {{ partial "latest-posts.html" . }}
 {{ end }}

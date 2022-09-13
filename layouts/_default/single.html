@@ -1,7 +1,3 @@
 {{ define "main" }}
-  <main class="main">
-    {{ partial "breadcrumb.html" . }}
-    {{ partial "post.html" (dict "Page" . "preview" false) }}
-  </main>
-  {{ partial "sidebar.html" . }}
+  {{ partial "post.html" (dict "Page" . "preview" false) }}
 {{ end }}
