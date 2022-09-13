@@ -43,6 +43,10 @@
       gap: 0.3em;
       font-size: 2em;
       color: $lightest-color;
+
+      a {
+        line-height: 1;
+      }
     }
   }
 }

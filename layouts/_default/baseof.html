@@ -23,9 +23,9 @@
       {{ block "main" . }}
         {{ .Content }}
       {{ end }}
-      {{ if (not .IsHome) }}
-        {{ partial "sidebar.html" . }}
-      {{ end }}
     </main>
+    {{ if (not .IsHome) }}
+      {{ partial "sidebar.html" . }}
+    {{ end }}
   </body>
 </html>

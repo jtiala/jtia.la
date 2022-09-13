@@ -5,46 +5,7 @@
   text-align: center;
   gap: 2em;
   background: $dark-color;
-  padding-top: 4.2em;
-
-  h2 {
-    font-size: 2em;
-    line-height: 1;
-    margin: 0;
-
-    a {
-      color: $lightest-color;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
-
-  .sidebar__author {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-
-  .sidebar__author-avatar {
-    max-width: 15rem;
-    max-height: 15rem;
-    border-radius: 100%;
-    border: 0.5rem solid $primary-color;
-  }
-
-  .sidebar__author-name-title {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .sidebar__social {
-    display: flex;
-    gap: 0.3em;
-    font-size: 2em;
-    color: $lightest-color;
-  }
+  padding: 4.2em 0;
 }
 
 @media (min-width: 940px) {
