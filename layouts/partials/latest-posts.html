@@ -20,12 +20,10 @@
                 <ion-icon name="pricetag"></ion-icon>
                 <h4 class="sr-only">Tags</h4>
                 <ul>
-                  {{ range . }}
-                    {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
-                      <li>
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                      </li>
-                    {{ end }}
+                  {{ range $tag := . }}
+                    <li>
+                      <a href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>
+                    </li>
                   {{ end }}
                 </ul>
               </div>

@@ -15,6 +15,7 @@
           {{ .Page.PublishDate.Format "Jan 2, 2006" }}
         </span>
       </div>
+
       {{ with .Page.Params.tags }}
         <div class="post__tags">
           <ion-icon name="pricetag"></ion-icon>
@@ -24,12 +25,10 @@
             <h2 class="sr-only">Tags</h2>
           {{ end }}
           <ul>
-            {{ range . }}
-              {{ with $.Page.Site.GetPage (printf "/%s/%s" "tags" . ) }}
-                <li>
-                  <a href="{{ .Permalink }}">{{ .Title }}</a>
-                </li>
-              {{ end }}
+            {{ range $tag := . }}
+              <li>
+                <a href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>
+              </li>
             {{ end }}
           </ul>
         </div>
