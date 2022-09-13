@@ -1,34 +1,7 @@
 {{ define "main" }}
-  {{ partial "header.html" $ }}
   <main class="main">
-    <article class="post">
-      <header class="post__header">
-        <h2 class ="post__title">{{ .Title }}</h2>
-        <div class="post__meta">
-          <div>
-            <ion-icon name="calendar"></ion-icon>&nbsp;{{ .PublishDate.Format "Jan 2, 2006" }}
-          </div>
-          <div>
-            <ion-icon name="time"></ion-icon>&nbsp;{{ .ReadingTime }} min read
-          </div>
-          {{- with .Params.tags -}}
-          <div>
-            <ion-icon name="pricetag"></ion-icon>&nbsp;
-            {{ range . -}}
-              {{- with $.Site.GetPage (printf "/%s/%s" "tags" . ) -}}
-                <a class="tag" href="{{ .Permalink }}">{{ .Title }}</a>
-              {{- end -}}
-            {{- end -}}
-          </div>
-          {{- end -}}
-        </div>
-      </header>
-      <div class="post__content">
-        {{ .Content }}
-      </div>
-      <div class="post__footer">
-        {{ template "_internal/disqus.html" . }}
-      </div>
-    </article>
+    {{ partial "breadcrumb.html" . }}
+    {{ partial "post.html" (dict "Page" . "preview" false) }}
   </main>
+  {{ partial "sidebar.html" . }}
 {{ end }}

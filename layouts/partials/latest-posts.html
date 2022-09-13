@@ -1,0 +1,51 @@
+<section class="latest-posts">
+  <h2 class="latest-posts__title">Latest Posts</h2>
+  <ul class="latest-posts__list">
+    {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
+      <li class="latest-posts__item">
+        <article class="latest-posts__post">
+          <h2 class="latest-posts__post-title">
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h2>
+          <div class="latest-posts__post-meta">
+            <div class="latest-posts__post-date">
+              <ion-icon name="calendar"></ion-icon>
+              <span>
+                <span class="sr-only">Published on</span>
+                {{ .PublishDate.Format "Jan 2, 2006" }}
+              </span>
+            </div>
+            {{ with .Params.tags }}
+              <div class="latest-posts__post-tags">
+                <ion-icon name="pricetag"></ion-icon>
+                <h2 class="sr-only">Tags</h2>
+                <ul>
+                  {{ range . }}
+                    {{ with $.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+                      <li>
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                      </li>
+                    {{ end }}
+                  {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+          </div>
+          {{ if (and (isset .Params "external_site") (isset .Params "external_link")) }}
+            <div class="latest-posts__post-read-link">
+              See the full post in
+              <a href="{{ .Params.external_link }}">
+                {{ .Params.external_site }}<ion-icon name="arrow-round-forward"></ion-icon>
+              </a>
+            </div>
+          {{ end }}
+        </article>
+      </li>
+    {{ end }}
+  </ul>
+  <div class="latest-posts__see-all">
+    <a href="{{ .Site.BaseURL }}/posts">See all posts
+      <ion-icon name="arrow-round-forward"></ion-icon>
+    </a>
+  </div>
+</section>

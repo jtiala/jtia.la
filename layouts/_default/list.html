@@ -1,20 +1,24 @@
 {{ define "main" }}
-  {{ partial "header.html" $ }}
   <main class="main">
-    <article>
-      <h2>Posts</h2>
-      <ul class="posts-list">
+    {{ partial "breadcrumb.html" . }}
+    <section class="posts">
+      <h1 class="posts__title">
+        {{ if eq .Kind "term" }}
+          Posts tagged with
+          <em>{{.Data.Term}}</em>
+        {{ else }}
+          Posts
+        {{ end }}
+      </h1>
+      <ul class="posts__list">
         {{ range $index, $element := .Paginator.Pages }}
-          <li class="posts-list__item">
-            <a class="posts-list__item-title" href="{{ .Permalink }}">{{ .Title }}</a>
-            <span class="posts-list__item-description">
-              <ion-icon name="time"></ion-icon>&nbsp;{{ .ReadingTime }} min read &mdash;
-              {{ .PublishDate.Format "Jan 2, 2006" }}
-            </span>
+          <li class="posts__item">
+            {{ partial "post.html" (dict "Page" . "preview" true) }}
           </li>
         {{ end }}
       </ul>
-      {{ partial "pagination.html" $ }}
-    </article>
+      {{ partial "pagination.html" . }}
+    </section>
   </main>
+  {{ partial "sidebar.html" . }}
 {{ end }}

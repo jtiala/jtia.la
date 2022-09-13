@@ -11,7 +11,7 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background: $dark-color;
+  background: $darkest-color;
   color: $light-color;
 }
 
@@ -53,4 +53,28 @@ pre {
 }
 ::-moz-selection {
   background: rgba($light-color, 0.25);
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em 2em;
+}
+
+@media (min-width: 940px) {
+  .main {
+    max-width: 65rem;
+    margin-left: 20rem;
+  }
 }

@@ -1,16 +1,78 @@
 .post {
-  .post__title {
-    color: $lightest-color;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 
-  .post__content {
-    pre {
-      border-left: 0.4em solid rgba($primary-color, 0.8);
-      padding-left: 1em;
+  .post__header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    .post__title {
+      line-height: 1.1;
+      margin: 0;
+      color: $lightest-color;
+    }
+
+    h1.post__title {
+      font-size: 2em;
+    }
+
+    h2.post__title {
+      font-size: 1.5em;
+    }
+
+    .post__meta {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+
+      .post__date {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 0.8em;
+      }
+
+      .post__tags {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        font-size: 0.8em;
+
+        ul {
+          display: flex;
+          gap: 0.2em;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+
+          li {
+            padding: 0 0.6em;
+            font-size: 0.9em;
+            border-radius: 0.2em;
+            white-space: nowrap;
+            background: rgba(255, 255, 255, 0.1);
+            transition: color 0.35s, background 0.35s;
+
+            &:hover {
+              transition: color 0.25s, background 0.05s;
+              background: rgba(255, 255, 255, 0.3);
+            }
+          }
+        }
+      }
     }
   }
 
-  .post__meta {
-    font-size: 0.8em;
+  .post__content {
+  }
+
+  .post__read-link {
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2em;
+    }
   }
 }

@@ -1,0 +1,56 @@
+<article class="post">
+  <header class="post__header">
+    {{ if .preview }}
+      <h2 class="post__title">
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+      </h2>
+    {{ else }}
+      <h1 class="post__title">{{ .Page.Title }}</h1>
+    {{ end }}
+    <div class="post__meta">
+      <div class="post__date">
+        <ion-icon name="calendar"></ion-icon>
+        <span>
+          <span class="sr-only">Published on</span>
+          {{ .Page.PublishDate.Format "Jan 2, 2006" }}
+        </span>
+      </div>
+      {{ with .Page.Params.tags }}
+        <div class="post__tags">
+          <ion-icon name="pricetag"></ion-icon>
+          <h2 class="sr-only">Tags</h2>
+          <ul>
+            {{ range . }}
+              {{ with $.Page.Site.GetPage (printf "/%s/%s" "tags" . ) }}
+                <li>
+                  <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </div>
+  </header>
+  <main class="post__content">
+    {{ if .preview }}
+      <p>{{ .Page.Summary }}</p>
+    {{ else }}
+      {{ .Page.Content }}
+    {{ end }}
+  </main>
+  {{ if (and (isset .Page.Params "external_site") (isset .Page.Params "external_link")) }}
+    <footer class="post__read-link">
+      See the full post in
+      <a href="{{ .Page.Params.external_link }}">
+        {{ .Page.Params.external_site }}<ion-icon name="arrow-round-forward"></ion-icon>
+      </a>
+    </footer>
+  {{ else if .preview }}
+    <footer class="post__read-link">
+      <a href="{{ .Page.Permalink }}">
+        Read more<ion-icon name="arrow-round-forward"></ion-icon>
+      </a>
+    </footer>
+  {{ end }}
+</article>

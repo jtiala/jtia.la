@@ -1,71 +1,17 @@
-$darkest-color: #212121;
-$dark-color: #1b1b1b;
+$dark-color: #212121;
+$darkest-color: #1b1b1b;
 $light-color: #bdbdbd;
 $lightest-color: #ffffff;
 $primary-color: #ffeb3b;
 $primary-lighter-color: #ffffa8;
 
 @import "base";
-
-@import "partials/header";
+@import "partials/breadcrumb";
+@import "partials/hero";
+@import "partials/homepage";
+@import "partials/latest-posts";
 @import "partials/pagination";
 @import "partials/post";
-@import "partials/posts-list";
-@import "partials/tag";
-
-.hero {
-  height: 100%;
-  background: $dark-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-
-  h1 {
-    font-size: 2em;
-    line-height: 1em;
-    margin: 0 0 1em 0;
-
-    a {
-      color: $lightest-color;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
-
-  .hero__avatar {
-    max-width: 15rem;
-    max-height: 15rem;
-    border-radius: 100%;
-    border: 0.5rem solid $primary-color;
-  }
-
-  .hero__author {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-  }
-
-  .hero__social {
-    font-size: 2em;
-    color: $lightest-color;
-
-    a {
-      margin: 0 0.1em;
-    }
-  }
-}
-
-.main {
-  padding: 1em 2em;
-}
-
-@media (min-width: 940px) {
-  .main {
-    max-width: 65rem;
-    margin-left: 20rem;
-  }
-}
+@import "partials/posts";
+@import "partials/sidebar";
+@import "partials/terms";

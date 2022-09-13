@@ -1,19 +1,24 @@
 {{ define "main" }}
-  {{ partial "header.html" $ }}
   <main class="main">
-    <article>
-      <h2>{{ .Title }}</h2>
-      <ul class="posts-list">
-        {{ range .Data.Terms.Alphabetical }}
-          <li class="posts-list__item">
-              <a class="posts-list__item-title" href="{{ .Page.Permalink }}">
-                {{ .Page.Title }}
-              </a>
-              ({{ .Count }} posts)
+    {{ partial "breadcrumb.html" . }}
+    <article class="terms">
+      <h1 class="terms__title">{{ .Title }}</h1>
+      <ul class="terms__list">
+        {{ range .Data.Terms.ByCount }}
+          <li class="terms__item">
+            <a class="terms__item-title" href="{{ .Page.Permalink }}">
+              {{ .Page.Title }}
+            </a>
+            {{ .Count }}
+            {{ if eq .Count 1 }}
+              post
+            {{ else }}
+              posts
+            {{ end }}
           </li>
         {{ end }}
       </ul>
-      {{ partial "pagination.html" $ }}
     </article>
   </main>
+  {{ partial "sidebar.html" . }}
 {{ end }}

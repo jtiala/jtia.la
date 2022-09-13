@@ -1,0 +1,25 @@
+.terms {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .terms__title {
+    line-height: 1;
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .terms__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .terms__item {
+    display: flex;
+    flex-direction: column;
+  }
+}

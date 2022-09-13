@@ -1,0 +1,48 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  max-width: 32rem;
+
+  .hero__title {
+    line-height: 1;
+    margin: 0;
+    font-size: 2em;
+
+    a {
+      color: $lightest-color;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+
+  .hero__author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+    .hero__author-avatar {
+      max-width: 15rem;
+      max-height: 15rem;
+      border-radius: 100%;
+      border: 0.5rem solid $primary-color;
+    }
+
+    .hero__author-details {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero__author-social {
+      display: flex;
+      justify-content: center;
+      gap: 0.3em;
+      font-size: 2em;
+      color: $lightest-color;
+    }
+  }
+}

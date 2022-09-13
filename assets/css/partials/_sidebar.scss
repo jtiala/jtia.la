@@ -1,12 +1,16 @@
-.header {
-  background: $darkest-color;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 2.5em 0;
+  gap: 2em;
+  background: $dark-color;
+  padding-top: 4.2em;
 
-  h1 {
+  h2 {
     font-size: 2em;
-    line-height: 1em;
-    margin: 0 0 1em 0;
+    line-height: 1;
+    margin: 0;
 
     a {
       color: $lightest-color;
@@ -17,31 +21,34 @@
     }
   }
 
-  .header__avatar {
+  .sidebar__author {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .sidebar__author-avatar {
     max-width: 15rem;
     max-height: 15rem;
     border-radius: 100%;
     border: 0.5rem solid $primary-color;
   }
 
-  .header__author {
+  .sidebar__author-name-title {
     display: flex;
     flex-direction: column;
-    margin: 1rem 0;
   }
 
-  .header__social {
+  .sidebar__social {
+    display: flex;
+    gap: 0.3em;
     font-size: 2em;
     color: $lightest-color;
-
-    a {
-      margin: 0 0.1em;
-    }
   }
 }
 
 @media (min-width: 940px) {
-  .header {
+  .sidebar {
     position: fixed;
     top: 0;
     left: 0;
