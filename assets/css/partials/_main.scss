@@ -1,0 +1,13 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1em 2em;
+}
+
+@media (min-width: 940px) {
+  .main {
+    max-width: 65rem;
+    margin-left: 20rem;
+  }
+}
