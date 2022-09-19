@@ -9,7 +9,7 @@
     {{ end }}
     <div class="post__meta">
       <div class="post__date">
-        <ion-icon name="calendar"></ion-icon>
+        <ion-icon name="calendar" class="icon"></ion-icon>
         <span>
           <span class="sr-only">Published on</span>
           {{ .Page.PublishDate.Format "Jan 2, 2006" }}
@@ -18,7 +18,7 @@
 
       {{ with .Page.Params.tags }}
         <div class="post__tags">
-          <ion-icon name="pricetag"></ion-icon>
+          <ion-icon name="pricetag" class="icon"></ion-icon>
           {{ if $.preview }}
             <h3 class="sr-only">Tags</h3>
           {{ else }}

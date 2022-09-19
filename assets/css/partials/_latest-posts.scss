@@ -64,6 +64,8 @@
 
           ul {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 0.2em;
             list-style: none;
             padding: 0;
@@ -83,6 +85,10 @@
               }
             }
           }
+        }
+
+        .icon {
+          flex-shrink: 0;
         }
       }
 

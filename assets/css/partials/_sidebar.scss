@@ -8,7 +8,7 @@
   padding: 4.2em 0;
 }
 
-@media (min-width: 940px) {
+@media (min-width: $desktop-breakpoint) {
   .sidebar {
     position: fixed;
     top: 0;

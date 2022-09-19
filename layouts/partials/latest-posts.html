@@ -9,7 +9,7 @@
           </h3>
           <div class="latest-posts__post-meta">
             <div class="latest-posts__post-date">
-              <ion-icon name="calendar"></ion-icon>
+              <ion-icon name="calendar" class="icon"></ion-icon>
               <span>
                 <span class="sr-only">Published on</span>
                 {{ .PublishDate.Format "Jan 2, 2006" }}
@@ -17,7 +17,7 @@
             </div>
             {{ with .Params.tags }}
               <div class="latest-posts__post-tags">
-                <ion-icon name="pricetag"></ion-icon>
+                <ion-icon name="pricetag" class="icon"></ion-icon>
                 <h4 class="sr-only">Tags</h4>
                 <ul>
                   {{ range $tag := . }}

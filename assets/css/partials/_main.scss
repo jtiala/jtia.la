@@ -5,7 +5,7 @@
   padding: 1em 2em;
 }
 
-@media (min-width: 940px) {
+@media (min-width: $desktop-breakpoint) {
   .main {
     max-width: 65rem;
     margin-left: 20rem;
