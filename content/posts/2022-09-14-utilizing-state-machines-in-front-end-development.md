@@ -6,6 +6,7 @@ tags:
   - statecharts
   - xstate
   - JavaScript
+  - TypeScript
 external_site: Solita Dev Blog
 external_link: https://dev.solita.fi/2022/09/14/utilizing-state-machines-in-front-end-development.html
 ---
