@@ -19,10 +19,6 @@ googleAnalytics = "UA-107120242-1"
     icon = "logo-twitter"
     url = "https://twitter.com/tjiala"
   [[params.social]]
-    name = "Instagram"
-    icon = "logo-instagram"
-    url = "https://instagram.com/tjiala"
-  [[params.social]]
     name = "LinkedIn"
     icon = "logo-linkedin"
     url = "https://linkedin.com/in/jtiala"
