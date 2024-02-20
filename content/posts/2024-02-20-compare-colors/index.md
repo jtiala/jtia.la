@@ -1,6 +1,6 @@
 ---
 title: Side Project Showcase - Compare Colors
-date: 2024-01-25
+date: 2024-02-20
 tags:
   - Side Project Showcase
   - JavaScript
