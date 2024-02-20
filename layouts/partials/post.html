@@ -37,7 +37,7 @@
   </header>
   <div class="post__content">
     {{ if .preview }}
-      <p>{{ .Page.Summary }}</p>
+      <p>{{ .Page.Summary | plainify }}</p>
     {{ else }}
       {{ .Page.Content }}
     {{ end }}
