@@ -26,3 +26,7 @@ googleAnalytics = "UA-107120242-1"
     name = "Email"
     icon = "mail"
     url = "mailto:joonas.tiala@gmail.com"
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
