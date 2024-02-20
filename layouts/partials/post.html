@@ -34,6 +34,28 @@
         </div>
       {{ end }}
     </div>
+    {{ if (and (not $.preview) (isset .Page.Params "links")) }}
+      <div class="post__links">
+        <h2 class="sr-only">Links</h2>
+        <ul>
+          {{ if isset .Page.Params.links "github" }}
+            <li>
+              <a href="{{ .Page.Params.links.github }}" target="_blank"><ion-icon name="arrow-round-forward"></ion-icon>See repository on GitHub</a>
+            </li>
+          {{ end }}
+          {{ if isset .Page.Params.links "app" }}
+            <li>
+              <a href="{{ .Page.Params.links.app }}" target="_blank"><ion-icon name="arrow-round-forward"></ion-icon>Check out the app</a>
+            </li>
+          {{ end }}
+          {{ if isset .Page.Params.links "site" }}
+            <li>
+              <a href="{{ .Page.Params.links.site }}" target="_blank"><ion-icon name="arrow-round-forward"></ion-icon>Checkout the site</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
   </header>
   <div class="post__content">
     {{ if .preview }}
