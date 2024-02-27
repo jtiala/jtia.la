@@ -9,15 +9,15 @@
     </h2>
   {{ end }}
   <div class="hero__author">
-    <img class="hero__author-avatar" src="{{ .Page.Site.Params.avatar | relURL }}" alt=""/>
+    <img class="hero__author-avatar" src="{{ .Page.Site.Params.author.avatar | relURL }}" alt="" />
     <div class="hero__author-details">
-      <span>{{ .Page.Site.Params.author }}</span>
+      <span>{{ .Page.Site.Params.author.name }}</span>
       <span>
-        <small>{{ .Page.Site.Params.author_title }}</small>
+        <small>{{ .Page.Site.Params.author.title }}</small>
       </span>
     </div>
     <div class="hero__author-social">
-      {{ range .Page.Site.Params.social }}
+      {{ range .Page.Site.Params.socialLinks }}
         <a target="_blank" href="{{ .url }}" rel="noreferrer noopener" title="{{ .name }}">
           <ion-icon name="{{ .icon }}"></ion-icon>
         </a>

@@ -1,5 +1,8 @@
 ---
 title: Side Project Showcase - Compare Colors
+description: Compare Colors is a super simple tool for comparing two colors side-by-side.
+images:
+  - compare-colors.png
 date: 2024-02-20
 tags:
   - Side Project Showcase

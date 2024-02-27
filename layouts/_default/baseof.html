@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     {{ hugo.Generator }}
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="{{ .Site.Params.author }}" />
+    <meta name="author" content="{{ .Site.Params.author.name }}" />
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
     {{ $style := resources.Get "css/index.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />

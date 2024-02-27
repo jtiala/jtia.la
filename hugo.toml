@@ -2,27 +2,32 @@ baseURL = "https://jtia.la"
 title = "jtia.la"
 languageCode = "en-us"
 paginate = 5
-googleAnalytics = "UA-107120242-1"
 
 [params]
-  avatar = "avatar.jpg"
-  author = "Joonas Tiala"
-  author_title = "Software Developer"
   description = "Joonas Tiala - Software Developer"
+  images = ["featured.png"]
 
-  [[params.social]]
+  [params.author]
+    name = "Joonas Tiala"
+    title = "Software Developer"
+    avatar = "avatar.jpg"
+
+  [params.social]
+    twitter = "tjiala"
+
+  [[params.socialLinks]]
     name = "GitHub"
     icon = "logo-github"
     url = "https://github.com/jtiala"
-  [[params.social]]
+  [[params.socialLinks]]
     name = "Twitter"
     icon = "logo-twitter"
     url = "https://twitter.com/tjiala"
-  [[params.social]]
+  [[params.socialLinks]]
     name = "LinkedIn"
     icon = "logo-linkedin"
     url = "https://linkedin.com/in/jtiala"
-  [[params.social]]
+  [[params.socialLinks]]
     name = "Email"
     icon = "mail"
     url = "mailto:joonas.tiala@gmail.com"
@@ -30,3 +35,7 @@ googleAnalytics = "UA-107120242-1"
 [markup]
   [markup.highlight]
     style = "dracula"
+
+[services]
+  [services.googleAnalytics]
+    ID = "G-MPSXQ3Q7GG"

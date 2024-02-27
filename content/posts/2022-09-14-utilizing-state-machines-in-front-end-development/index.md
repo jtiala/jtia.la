@@ -1,5 +1,8 @@
 ---
 title: Utilizing state machines in front-end development
+description: State machines and statecharts are powerful computational models, that have been used for decades in software development. As front-end developers, we might have forgotten them for a while, but in recent years, there has been newly founded hype around them. And rightfully so!
+images:
+  - dimmable-light-switch.png
 date: 2022-08-14
 tags:
   - state machines
