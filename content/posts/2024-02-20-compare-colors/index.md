@@ -9,7 +9,7 @@ links:
   app: https://jtiala.github.io/compare-colors
 ---
 
-[Compare Colors](https://github.com/jtiala/compare-colors) is a super simple tool for comparing two colors side-by-side.
+Compare Colors is a super simple tool for comparing two colors side-by-side.
 
 <!--more-->
 
