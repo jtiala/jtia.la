@@ -10,7 +10,6 @@
     {{ $style := resources.Get "css/index.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $style.Permalink }}" />
     <link href="https://fonts.googleapis.com/css?family=Hepta+Slab|Open+Sans&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     {{ template "_internal/google_analytics.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
     {{ template "_internal/opengraph.html" . }}
@@ -27,5 +26,7 @@
     {{ if (not .IsHome) }}
       {{ partial "sidebar.html" . }}
     {{ end }}
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
