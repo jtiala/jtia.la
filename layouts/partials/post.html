@@ -40,17 +40,17 @@
         <ul>
           {{ if isset .Page.Params.links "github" }}
             <li>
-              <a href="{{ .Page.Params.links.github }}" target="_blank"><ion-icon name="arrow-round-forward"></ion-icon>See repository on GitHub</a>
+              <a href="{{ .Page.Params.links.github }}" target="_blank"><ion-icon name="arrow-forward"></ion-icon>See repository on GitHub</a>
             </li>
           {{ end }}
           {{ if isset .Page.Params.links "app" }}
             <li>
-              <a href="{{ .Page.Params.links.app }}" target="_blank"><ion-icon name="arrow-round-forward"></ion-icon>Check out the app</a>
+              <a href="{{ .Page.Params.links.app }}" target="_blank"><ion-icon name="arrow-forward"></ion-icon>Check out the app</a>
             </li>
           {{ end }}
           {{ if isset .Page.Params.links "site" }}
             <li>
-              <a href="{{ .Page.Params.links.site }}" target="_blank"><ion-icon name="arrow-round-forward"></ion-icon>Checkout the site</a>
+              <a href="{{ .Page.Params.links.site }}" target="_blank"><ion-icon name="arrow-forward"></ion-icon>Checkout the site</a>
             </li>
           {{ end }}
         </ul>
@@ -68,13 +68,13 @@
     <footer class="post__read-link">
       Read the full post on
       <a href="{{ .Page.Params.external_link }}">
-        {{ .Page.Params.external_site }}<ion-icon name="arrow-round-forward"></ion-icon>
+        {{ .Page.Params.external_site }}<ion-icon name="arrow-forward"></ion-icon>
       </a>
     </footer>
   {{ else if .preview }}
     <footer class="post__read-link">
       <a href="{{ .Page.Permalink }}">
-        Read more<ion-icon name="arrow-round-forward"></ion-icon>
+        Read more<ion-icon name="arrow-forward"></ion-icon>
       </a>
     </footer>
   {{ end }}
