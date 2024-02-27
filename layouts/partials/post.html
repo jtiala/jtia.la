@@ -59,7 +59,7 @@
   </header>
   <div class="post__content">
     {{ if .preview }}
-      <p>{{ .Page.Summary | plainify }}</p>
+      <p>{{ .Page.Summary | htmlUnescape | plainify }}</p>
     {{ else }}
       {{ .Page.Content }}
     {{ end }}
