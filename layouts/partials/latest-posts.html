@@ -21,7 +21,7 @@
               <ul>
                 {{ range $tag := . }}
                   <li>
-                    <a href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>
+                    <a href='{{ "tags" | relLangURL }}{{ $tag | urlize }}'>{{ $tag }}</a>
                   </li>
                 {{ end }}
               </ul>

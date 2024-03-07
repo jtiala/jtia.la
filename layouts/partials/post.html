@@ -27,7 +27,7 @@
           <ul>
             {{ range $tag := . }}
               <li>
-                <a href="{{ "tags/" | relLangURL }}{{ $tag | urlize }}">{{ $tag }}</a>
+                <a href='{{ "tags" | relLangURL }}{{ $tag | urlize }}'>{{ $tag }}</a>
               </li>
             {{ end }}
           </ul>
@@ -38,19 +38,9 @@
       <div class="post__links">
         <h2 class="sr-only">Links</h2>
         <ul>
-          {{ if isset .Page.Params.links "github" }}
+          {{ range .Page.Params.links }}
             <li>
-              <a href="{{ .Page.Params.links.github }}" target="_blank"><ion-icon name="arrow-forward"></ion-icon>See repository on GitHub</a>
-            </li>
-          {{ end }}
-          {{ if isset .Page.Params.links "app" }}
-            <li>
-              <a href="{{ .Page.Params.links.app }}" target="_blank"><ion-icon name="arrow-forward"></ion-icon>Check out the app</a>
-            </li>
-          {{ end }}
-          {{ if isset .Page.Params.links "site" }}
-            <li>
-              <a href="{{ .Page.Params.links.site }}" target="_blank"><ion-icon name="arrow-forward"></ion-icon>Checkout the site</a>
+              <a href="{{ .url }}" target="_blank"><ion-icon name='{{ or .icon "arrow-forward" }}'></ion-icon>{{ .title }}</a>
             </li>
           {{ end }}
         </ul>
@@ -64,14 +54,7 @@
       {{ .Page.Content }}
     {{ end }}
   </div>
-  {{ if (and (isset .Page.Params "external_site") (isset .Page.Params "external_link")) }}
-    <footer class="post__read-link">
-      Read the full post on
-      <a href="{{ .Page.Params.external_link }}">
-        {{ .Page.Params.external_site }}<ion-icon name="arrow-forward"></ion-icon>
-      </a>
-    </footer>
-  {{ else if .preview }}
+  {{ if .preview }}
     <footer class="post__read-link">
       <a href="{{ .Page.Permalink }}">
         Read more<ion-icon name="arrow-forward"></ion-icon>

@@ -8,8 +8,11 @@ tags:
   - Side Project Showcase
   - JavaScript
 links:
-  github: https://github.com/jtiala/compare-colors
-  app: https://jtiala.github.io/compare-colors
+  - url: https://github.com/jtiala/compare-colors
+    title: See repository on GitHub
+    icon: logo-github
+  - url: https://jtiala.github.io/compare-colors
+    title: Check out the app
 ---
 
 Compare Colors is a super simple tool for comparing two colors side-by-side.
