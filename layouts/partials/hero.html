@@ -1,28 +1,26 @@
 <section class="hero">
   {{ if .homepage }}
-    <h1 class="hero__title">
+    <h1 class="title">
       <a href="{{ .Page.Site.BaseURL }}">{{ .Page.Site.Title }}</a>
     </h1>
   {{ else }}
-    <h2 class="hero__title">
+    <h2 class="title">
       <a href="{{ .Page.Site.BaseURL }}">{{ .Page.Site.Title }}</a>
     </h2>
   {{ end }}
-  <div class="hero__author">
-    <img class="hero__author-avatar" src="{{ .Page.Site.Params.author.avatar | relURL }}" alt="" />
-    <div class="hero__author-details">
+  <div class="author">
+    <img class="avatar" src="{{ .Page.Site.Params.author.avatar | relURL }}" alt="" />
+    <div class="details">
       <span>{{ .Page.Site.Params.author.name }}</span>
-      <span>
-        <small>{{ .Page.Site.Params.author.title }}</small>
-      </span>
+      <small>{{ .Page.Site.Params.author.title }}</small>
     </div>
-    <div class="hero__author-social">
+    <div class="social">
       {{ range .Page.Site.Params.socialLinks }}
-        <a target="_blank" href="{{ .url }}" rel="noreferrer noopener" title="{{ .name }}">
-          <ion-icon name="{{ .icon }}"></ion-icon>
+        <a href="{{ .url }}" target="_blank" rel="noreferrer noopener">
+          <ion-icon class="icon" name="{{ .icon }}"></ion-icon>
+          <span class="sr-only">{{ .name }}</span>
         </a>
       {{ end }}
     </div>
   </div>
-
 </section>

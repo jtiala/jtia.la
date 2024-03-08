@@ -1,39 +1,23 @@
 <section class="latest-posts">
-  <h2 class="latest-posts__title">Latest Posts</h2>
-  <ul class="latest-posts__list">
+  <h2>Latest Posts</h2>
+  <ul class="posts-list">
     {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
-      <li class="latest-posts__item">
-        <article class="latest-posts__post">
-          <div class="latest-posts__post-date">
-            <ion-icon name="calendar" class="icon"></ion-icon>
-            <span>
-              <span class="sr-only">Published on</span>
-              {{ .PublishDate.Format "Jan 2, 2006" }}
-            </span>
+      <li>
+        <article>
+          <div class="date">
+            <span class="sr-only">Published on</span>
+            {{ .PublishDate.Format "Jan 2, 2006" }}
           </div>
-          <h3 class="latest-posts__post-title">
+          <h3>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
           </h3>
-          {{ with .Params.tags }}
-            <div class="latest-posts__post-tags">
-              <ion-icon name="pricetag" class="icon"></ion-icon>
-              <h4 class="sr-only">Tags</h4>
-              <ul>
-                {{ range $tag := . }}
-                  <li>
-                    <a href='{{ "tags" | relLangURL }}{{ $tag | urlize }}'>{{ $tag }}</a>
-                  </li>
-                {{ end }}
-              </ul>
-            </div>
-          {{ end }}
         </article>
       </li>
     {{ end }}
   </ul>
-  <div class="latest-posts__see-all">
+  <div class="see-all">
     <a href="{{ .Site.BaseURL }}/posts">See all posts
-      <ion-icon name="arrow-forward"></ion-icon>
+      <ion-icon class="icon" name="arrow-forward"></ion-icon>
     </a>
   </div>
 </section>

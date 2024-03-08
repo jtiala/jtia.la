@@ -1,10 +1,10 @@
 {{ define "main" }}
   <article class="terms">
-    <h1 class="terms__title">{{ .Title }}</h1>
-    <ul class="terms__list">
+    <h1>{{ .Title }}</h1>
+    <ul class="terms-list">
       {{ range .Data.Terms.ByCount }}
-        <li class="terms__item">
-          <a class="terms__item-title" href="{{ .Page.Permalink }}">
+        <li>
+          <a href="{{ .Page.Permalink }}">
             {{ .Page.Title }}
           </a>
           {{ .Count }}

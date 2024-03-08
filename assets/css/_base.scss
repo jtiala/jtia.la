@@ -27,11 +27,12 @@ h6 {
 
 a {
   color: $primary-color;
-  transition: color 0.35s;
   text-decoration: none;
+  transition: color 0.35s, background 0.35s;
 
   &:hover {
     color: $primary-lighter-color;
+    transition: color 0.25s, background 0.05s;
   }
 }
 
@@ -56,6 +57,10 @@ pre {
 }
 ::-moz-selection {
   background: rgba($light-color, 0.25);
+}
+
+.icon {
+  flex-shrink: 0;
 }
 
 .sr-only:not(:focus):not(:active) {

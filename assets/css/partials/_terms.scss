@@ -3,23 +3,25 @@
   flex-direction: column;
   gap: 1em;
 
-  .terms__title {
+  h1 {
     line-height: 1;
     margin: 0;
     font-size: 2em;
+    padding-left: 0.5em;
+    border-left: 0.5em solid $primary-color;
   }
 
-  .terms__list {
+  .terms-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
     gap: 1em;
-  }
 
-  .terms__item {
-    display: flex;
-    flex-direction: column;
+    > li {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

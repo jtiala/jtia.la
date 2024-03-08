@@ -1,0 +1,37 @@
+<article class="preview">
+  <header>
+    <h2>
+      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+    </h2>
+    <div class="meta">
+      <div class="date">
+        <ion-icon class="icon" name="calendar"></ion-icon>
+        <span>
+          <span class="sr-only">Published on</span>
+          {{ .Page.PublishDate.Format "Jan 2, 2006" }}
+        </span>
+      </div>
+      {{ with .Page.Params.tags }}
+        <div class="tags">
+          <ion-icon class="icon" name="pricetag"></ion-icon>
+          <h3 class="sr-only">Tags</h3>
+          <ul>
+            {{ range $tag := . }}
+              <li>
+                <a href='{{ "tags/" | relLangURL }}{{ $tag | urlize }}'>{{ $tag }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        </div>
+      {{ end }}
+    </div>
+  </header>
+  <div class="content">
+    <p>{{ .Page.Summary | htmlUnescape | plainify }}</p>
+  </div>
+  <footer class="read-link">
+    <a href="{{ .Page.Permalink }}">
+      Read more<ion-icon class="icon" name="arrow-forward"></ion-icon>
+    </a>
+  </footer>
+</article>

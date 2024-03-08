@@ -1,5 +1,5 @@
 .breadcrumb {
-  .breadcrumb__list {
+  ol {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
@@ -8,7 +8,7 @@
     margin: 0;
     font-size: 0.8em;
 
-    .breadcrumb__item {
+    li {
       display: flex;
       align-items: center;
       line-height: 1.1;

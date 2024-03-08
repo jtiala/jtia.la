@@ -5,13 +5,13 @@
   gap: 1.5em;
   max-width: 32rem;
 
-  .latest-posts__title {
+  h2 {
     line-height: 1;
     margin: 0;
     font-size: 2em;
   }
 
-  .latest-posts__list {
+  .posts-list {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -19,80 +19,31 @@
     flex-direction: column;
     gap: 1em;
 
-    .latest-posts__item {
-      .latest-posts__post {
+    > li {
+      > article {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 1.5em;
-        gap: 1em;
+        gap: 0.5em;
         background-color: $dark-color;
         border-radius: 0.5em;
 
-        .latest-posts__post-date {
-          display: flex;
-          align-items: center;
-          gap: 0.5em;
+        .date {
           font-size: 0.8em;
         }
 
-        .latest-posts__post-title {
+        h3 {
           line-height: 1.5;
           margin: 0;
           color: $lightest-color;
           font-size: 1.1em;
         }
-
-        .latest-posts__post-tags {
-          display: flex;
-          align-items: center;
-          gap: 0.5em;
-          font-size: 0.8em;
-
-          ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.2em;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            li {
-              padding: 0 0.6em;
-              font-size: 0.9em;
-              border-radius: 0.2em;
-              white-space: nowrap;
-              background: rgba(255, 255, 255, 0.1);
-              transition: color 0.35s, background 0.35s;
-
-              &:hover {
-                transition: color 0.25s, background 0.05s;
-                background: rgba(255, 255, 255, 0.3);
-              }
-            }
-          }
-        }
-
-        .icon {
-          flex-shrink: 0;
-        }
-
-        .latest-posts__post-content {
-        }
-
-        .latest-posts__post-read-link {
-          a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.2em;
-          }
-        }
       }
     }
   }
 
-  .latest-posts__see-all {
+  .see-all {
     a {
       display: inline-flex;
       align-items: center;

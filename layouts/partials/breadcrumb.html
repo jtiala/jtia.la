@@ -1,5 +1,5 @@
-<nav aria-label="breadcrumbs" class="breadcrumb">
-  <ol class="breadcrumb__list">
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
     {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
   </ol>
 </nav>
@@ -10,7 +10,7 @@
   {{ else if not .p1.IsHome }}
     {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
   {{ end }}
-  <li class="breadcrumb__item{{ if eq .p1 .p2 }} active{{ end }}">
-    <a {{ if eq .p1 .p2 }} aria-current="page" {{ end }} href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+  <li class="{{ if eq .p1 .p2 }}active{{ end }}">
+    <a href="{{ .p1.Permalink }}" {{ if eq .p1 .p2 }} aria-current="page" {{ end }}>{{ .p1.Title }}</a>
   </li>
 {{ end }}

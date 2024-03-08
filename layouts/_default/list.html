@@ -1,6 +1,6 @@
 {{ define "main" }}
   <section class="posts">
-    <h1 class="posts__title">
+    <h1>
       {{ if eq .Kind "term" }}
         Posts tagged with
         <em>{{.Data.Term}}</em>
@@ -8,10 +8,10 @@
         Posts
       {{ end }}
     </h1>
-    <ul class="posts__list">
+    <ul class="posts-list">
       {{ range $index, $element := .Paginator.Pages }}
-        <li class="posts__item">
-          {{ partial "post.html" (dict "Page" . "preview" true) }}
+        <li>
+          {{ partial "preview.html" (dict "Page" .) }}
         </li>
       {{ end }}
     </ul>

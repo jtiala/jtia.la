@@ -13,7 +13,7 @@ tags:
   - TypeScript
 links:
   - url: https://dev.solita.fi/2022/09/14/utilizing-state-machines-in-front-end-development.html
-    title: This article was also published in Solita Dev Blog
+    title: Read this article in Solita Dev Blog
 ---
 
 The state machine is a very old concept. In fact, it even precedes modern computers. Despite its respectable age, the state machine is a super useful computational model to have in your toolbox of modern web development. Recently, there has been a lot of buzz around state machines and especially a popular state machine library called [XState](https://xstate.js.org).

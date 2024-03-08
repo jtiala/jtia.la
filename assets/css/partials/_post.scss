@@ -3,115 +3,122 @@
   flex-direction: column;
   gap: 1em;
 
-  .post__header {
+  header {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
 
-    .post__title {
+    h1 {
       line-height: 1.1;
       margin: 0;
       color: $lightest-color;
-    }
-
-    h1.post__title {
       font-size: 2em;
+      padding-left: 0.5em;
+      border-left: 0.5em solid $primary-color;
     }
 
-    h2.post__title {
-      font-size: 1.5em;
-    }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      border: 1px dashed rgba(255, 255, 255, 0.3);
+      border-left: 0;
+      border-right: 0;
+      padding: 0.5em 0;
+      gap: 1em;
+      font-size: 0.8em;
 
-    .post__meta {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5em;
-
-      .post__date {
+      .column {
         display: flex;
-        align-items: center;
-        gap: 0.5em;
-        font-size: 0.8em;
-      }
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
 
-      .post__tags {
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-        font-size: 0.8em;
-
-        ul {
+        section {
           display: flex;
-          flex-wrap: wrap;
-          gap: 0.2em;
-          list-style: none;
-          padding: 0;
-          margin: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.25em;
 
-          li {
-            padding: 0 0.6em;
-            font-size: 0.9em;
-            border-radius: 0.2em;
-            white-space: nowrap;
-            background: rgba(255, 255, 255, 0.1);
-            transition: color 0.35s, background 0.35s;
+          h2 {
+            margin: 0;
+            font-size: 1em;
+            font-style: italic;
+            font-weight: normal;
+          }
 
-            &:hover {
-              transition: color 0.25s, background 0.05s;
-              background: rgba(255, 255, 255, 0.3);
+          .link-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.25em;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+              a {
+                display: inline-flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                gap: 0.5em;
+                padding: 0 0.6em;
+                font-size: 0.9em;
+                border-radius: 0.2em;
+                background: rgba(255, 255, 255, 0.1);
+
+                &:hover {
+                  background: rgba(255, 255, 255, 0.3);
+                }
+
+                .icon {
+                  color: $light-color;
+                }
+              }
             }
           }
         }
-      }
 
-      .icon {
-        flex-shrink: 0;
-      }
-    }
+        .table-of-contents ul {
+          list-style-position: outside;
+          margin: 0 1em;
+          list-style-type: "# ";
+          padding-inline-start: 1em;
+        }
 
-    .post__links {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      align-self: flex-start;
-      padding: 1.5em;
-      background-color: $dark-color;
-      border-radius: 0.5em;
-
-      ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-
-        a {
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5em;
+        .table-of-contents nav > ul {
+          padding: 0;
         }
       }
     }
 
     @media (min-width: $desktop-breakpoint) {
-      .post__meta {
-        flex-direction: row;
-        align-items: center;
+      .meta {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1em;
+        padding: 0;
+
+        .column {
+          gap: 1em;
+          padding-top: 0.5em;
+          padding-bottom: 0.5em;
+
+          &:not(:last-child) {
+            border-right: 1px dashed rgba(255, 255, 255, 0.3);
+            padding-right: 1em;
+          }
+        }
       }
     }
   }
 
-  .post__content {
+  .content {
+    h2 {
+      border-left: 0.5em solid $primary-color;
+      padding-left: 0.5em;
+    }
+
     img {
       max-width: 100%;
-    }
-  }
-
-  .post__read-link {
-    a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.2em;
     }
   }
 }
