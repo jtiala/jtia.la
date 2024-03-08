@@ -1,10 +1,9 @@
 ---
-draft: true
 title: Utilizing state machines in front-end development
 description: The state machine is a very old concept. In fact, it even precedes modern computers. Despite its respectable age, the state machine is a super useful computational model to have in your toolbox of modern web development.
 images:
   - dimmable-light-switch.png
-date: 2022-08-14
+date: 2022-09-14
 tags:
   - state machines
   - statecharts
