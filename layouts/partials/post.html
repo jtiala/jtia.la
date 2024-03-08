@@ -1,16 +1,16 @@
 <article class="post">
   <header>
     <h1>{{ .Page.Title }}</h1>
-    <div class="meta">
+    <aside>
       <div class="column">
         <section>
-          <h2>Publish date</h2>
+          <span class="title">Publish date</span>
           <span>
             {{ .Page.PublishDate.Format "Jan 2, 2006" }}
           </span>
         </section>
         <section>
-          <h2>Reading time</h2>
+          <span class="title">Reading time</span>
           <span>
             {{ .Page.ReadingTime }} minutes
           </span>
@@ -19,12 +19,12 @@
       <div class="column">
         {{ with .Page.Params.tags }}
           <section>
-            <h2>Tags</h2>
+            <h2 class="title">Tags</h2>
             <ul class="link-list">
               {{ range $tag := . }}
                 <li>
                   <a href='{{ "tags/" | relLangURL }}{{ $tag | urlize }}'>
-                    <ion-icon class="icon" name="pricetag"></ion-icon>
+                    <ion-icon class="icon" name="pricetag" aria-hidden="true"></ion-icon>
                     {{ $tag }}
                   </a>
                 </li>
@@ -34,12 +34,12 @@
         {{ end }}
         {{ if (isset .Page.Params "links") }}
           <section>
-            <h2>Links</h2>
+            <h2 class="title">Links</h2>
             <ul class="link-list">
               {{ range .Page.Params.links }}
                 <li>
                   <a href="{{ .url }}" target="_blank">
-                    <ion-icon class="icon" name='{{ or .icon "arrow-forward" }}'></ion-icon>
+                    <ion-icon class="icon" name='{{ or .icon "arrow-forward" }}' aria-hidden="true"></ion-icon>
                     {{ .title }}
                   </a>
                 </li>
@@ -51,12 +51,12 @@
       {{ if and (gt .Page.WordCount 400) (or (eq .Page.Params.toc true) (not (isset .Page.Params "toc"))) }}
         <div class="column">
           <section class="table-of-contents">
-            <h2>Table of Contents</h2>
+            <h2 class="title">Table of Contents</h2>
             {{ .Page.TableOfContents }}
           </section>
         </div>
       {{ end }}
-    </div>
+    </aside>
   </header>
   <div class="content">
     {{ .Page.Content }}

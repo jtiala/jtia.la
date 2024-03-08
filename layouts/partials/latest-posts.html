@@ -4,10 +4,10 @@
     {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
       <li>
         <article>
-          <div class="date">
-            <span class="sr-only">Published on</span>
+          <aside>
+            <span class="sr-only">Published on </span>
             {{ .PublishDate.Format "Jan 2, 2006" }}
-          </div>
+          </aside>
           <h3>
             <a href="{{ .Permalink }}">{{ .Title }}</a>
           </h3>
@@ -17,7 +17,7 @@
   </ul>
   <div class="see-all">
     <a href="{{ .Site.BaseURL }}/posts">See all posts
-      <ion-icon class="icon" name="arrow-forward"></ion-icon>
+      <ion-icon class="icon" name="arrow-forward" aria-hidden="true"></ion-icon>
     </a>
   </div>
 </section>
