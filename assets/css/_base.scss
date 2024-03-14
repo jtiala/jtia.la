@@ -11,8 +11,8 @@ body {
   height: 100%;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  background: $darkest-color;
-  color: $light-color;
+  background: $dark-color-1;
+  color: $light-color-2;
 }
 
 h1,
@@ -22,7 +22,7 @@ h4,
 h5,
 h6 {
   font-family: "Hepta Slab", serif;
-  color: $lightest-color;
+  color: $light-color-1;
 }
 
 a {
@@ -31,7 +31,7 @@ a {
   transition: color 0.35s, background 0.35s;
 
   &:hover {
-    color: $primary-lighter-color;
+    color: $primary-color-light;
     transition: color 0.25s, background 0.05s;
   }
 }
@@ -39,7 +39,7 @@ a {
 code {
   font-family: monospace, monospace;
   font-size: 1rem;
-  color: rgba($light-color, 0.8);
+  color: $light-color-2;
 }
 
 pre {
@@ -53,10 +53,13 @@ pre {
 }
 
 ::selection {
-  background: rgba($light-color, 0.25);
+  background: $primary-color;
+  color: $dark-color-2;
 }
+
 ::-moz-selection {
-  background: rgba($light-color, 0.25);
+  background: $primary-color;
+  color: $dark-color-2;
 }
 
 .icon {

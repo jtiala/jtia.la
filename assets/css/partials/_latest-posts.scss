@@ -9,7 +9,7 @@
     line-height: 1;
     margin: 0;
     font-size: 1.5rem;
-    color: $lightest-color;
+    color: $light-color-1;
   }
 
   > ul {
@@ -27,7 +27,7 @@
         align-items: center;
         padding: 1.5rem;
         gap: 1.5rem;
-        background-color: $dark-color;
+        background-color: $dark-color-2;
         border-radius: 0.5rem;
 
         .date-and-title {
@@ -37,7 +37,7 @@
 
           .date {
             font-family: "Hepta Slab", serif;
-            color: $light-color;
+            color: $light-color-2;
             font-size: 0.8rem;
             font-style: italic;
             font-weight: normal;
@@ -45,15 +45,15 @@
 
           h3 {
             margin: 0;
-            color: $lightest-color;
+            color: $light-color-1;
             font-size: 1.1rem;
             line-height: 1.5;
 
             a {
-              color: $lightest-color;
+              color: $light-color-1;
 
               &:hover {
-                color: $primary-lighter-color;
+                color: $primary-color;
               }
             }
           }
@@ -82,14 +82,15 @@
                 padding: 0 0.6rem;
                 font-size: 0.8rem;
                 border-radius: 0.2rem;
-                background: rgba(255, 255, 255, 0.1);
+                background: $dark-color-3;
+                color: $light-color-1;
 
                 &:hover {
-                  background: rgba(255, 255, 255, 0.3);
+                  background: $dark-color-4;
                 }
 
                 .icon {
-                  color: $light-color;
+                  color: $light-color-2;
                 }
               }
             }

@@ -11,12 +11,12 @@
     aside {
       display: grid;
       grid-template-columns: repeat(1, minmax(0, 1fr));
-      border: 1px dashed rgba(255, 255, 255, 0.3);
+      border: 1px dashed $light-color-3;
       border-left: 0;
       border-right: 0;
       padding: 0.5rem 0;
       gap: 1rem;
-      color: $light-color;
+      color: $light-color-2;
 
       .column {
         display: flex;
@@ -32,7 +32,7 @@
 
           .title {
             font-family: "Hepta Slab", serif;
-            color: $lightest-color;
+            color: $light-color-1;
             margin: 0;
             font-size: 1rem;
             font-style: italic;
@@ -57,14 +57,15 @@
                 padding: 0 0.6rem;
                 font-size: 0.8rem;
                 border-radius: 0.2rem;
-                background: rgba(255, 255, 255, 0.1);
+                background: $dark-color-3;
+                color: $light-color-1;
 
                 &:hover {
-                  background: rgba(255, 255, 255, 0.3);
+                  background: $dark-color-4;
                 }
 
                 .icon {
-                  color: $light-color;
+                  color: $light-color-2;
                 }
               }
             }
@@ -97,7 +98,7 @@
           padding-bottom: 0.5rem;
 
           &:not(:last-child) {
-            border-right: 1px dashed rgba(255, 255, 255, 0.3);
+            border-right: 1px dashed $light-color-3;
             padding-right: 1rem;
           }
         }
@@ -121,7 +122,7 @@
 
     a {
       text-decoration: underline;
-      text-decoration-color: $light-color;
+      text-decoration-color: $light-color-2;
       text-underline-offset: 0.2rem;
     }
 
