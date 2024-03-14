@@ -1,7 +1,7 @@
 .pagination {
   ul {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: center;
     gap: 0.5rem;
     list-style: none;

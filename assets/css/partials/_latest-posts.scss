@@ -1,6 +1,6 @@
 .latest-posts {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   gap: 1.5rem;
   max-width: 32rem;
@@ -17,13 +17,13 @@
     padding: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     gap: 1rem;
 
     > li {
       > article {
         display: flex;
-        flex-direction: column;
+        flex-flow: column nowrap;
         align-items: center;
         padding: 1.5rem;
         gap: 1.5rem;
@@ -33,7 +33,7 @@
 
         .date-and-title {
           display: flex;
-          flex-direction: column;
+          flex-flow: column nowrap;
           gap: 0.5rem;
 
           .date {
@@ -61,14 +61,11 @@
         }
 
         aside {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-
           ul {
             display: flex;
-            flex-direction: row;
+            flex-flow: row wrap;
             align-items: flex-start;
+            justify-content: center;
             gap: 0.25rem;
             list-style: none;
             padding: 0;

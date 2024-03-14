@@ -1,6 +1,6 @@
 .main {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   gap: 2rem;
   padding: 1rem 2rem;
 
@@ -15,7 +15,7 @@
 
   > section {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     gap: 1rem;
   }
 }

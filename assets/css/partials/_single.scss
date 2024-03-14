@@ -1,11 +1,11 @@
 .single {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   gap: 1rem;
 
   header {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     gap: 2rem;
 
     aside {
@@ -20,13 +20,13 @@
 
       .column {
         display: flex;
-        flex-direction: column;
+        flex-flow: column nowrap;
         align-items: flex-start;
         gap: 1rem;
 
         section {
           display: flex;
-          flex-direction: column;
+          flex-flow: column nowrap;
           align-items: flex-start;
           gap: 0.25rem;
 
@@ -41,7 +41,7 @@
 
           .link-list {
             display: flex;
-            flex-direction: column;
+            flex-flow: column nowrap;
             align-items: flex-start;
             gap: 0.25rem;
             list-style: none;

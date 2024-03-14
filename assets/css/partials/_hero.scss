@@ -1,6 +1,6 @@
 .hero {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   gap: 1.5em;
   max-width: 32rem;
@@ -21,7 +21,7 @@
 
   .author {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     justify-content: center;
     gap: 1rem;
 
@@ -34,7 +34,8 @@
 
     .details {
       display: flex;
-      flex-direction: column;
+      flex-flow: column nowrap;
+      gap: 0.5rem;
     }
 
     .social {

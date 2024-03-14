@@ -1,6 +1,6 @@
 .sidebar {
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   align-items: center;
   text-align: center;
   gap: 2rem;
