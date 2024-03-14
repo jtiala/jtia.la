@@ -1,4 +1,4 @@
-.terms {
+.list {
   > ul {
     list-style: none;
     padding: 0;
@@ -8,8 +8,11 @@
     gap: 1rem;
 
     > li {
-      display: flex;
-      flex-direction: column;
+      padding: 1rem 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+      }
     }
   }
 }

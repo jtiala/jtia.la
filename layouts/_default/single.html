@@ -1,3 +1,66 @@
 {{ define "main" }}
-  {{ partial "post.html" (dict "Page" . "preview" false) }}
+  <article class="single">
+    <header>
+      <h1>{{ .Page.Title }}</h1>
+      <aside>
+        <div class="column">
+          <section>
+            <span class="title">Publish date</span>
+            <span>
+              {{ .Page.PublishDate.Format "Jan 2, 2006" }}
+            </span>
+          </section>
+          <section>
+            <span class="title">Reading time</span>
+            <span>
+              {{ .Page.ReadingTime }} minutes
+            </span>
+          </section>
+        </div>
+        <div class="column">
+          {{ with .Page.Params.tags }}
+            <section>
+              <h2 class="title">Tags</h2>
+              <ul class="link-list">
+                {{ range $tag := . }}
+                  <li>
+                    <a href='{{ "tags/" | relLangURL }}{{ $tag | urlize }}'>
+                      <ion-icon class="icon" name="pricetag" aria-hidden="true"></ion-icon>
+                      {{ $tag }}
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </section>
+          {{ end }}
+          {{ if (isset .Page.Params "links") }}
+            <section>
+              <h2 class="title">Links</h2>
+              <ul class="link-list">
+                {{ range .Page.Params.links }}
+                  <li>
+                    <a href="{{ .url }}" target="_blank">
+                      <ion-icon class="icon" name='{{ or .icon "arrow-forward" }}' aria-hidden="true"></ion-icon>
+                      {{ .title }}
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </section>
+          {{ end }}
+        </div>
+        {{ if and (gt .Page.WordCount 400) (or (eq .Page.Params.toc true) (not (isset .Page.Params "toc"))) }}
+          <div class="column">
+            <section class="table-of-contents">
+              <h2 class="title">Table of Contents</h2>
+              {{ .Page.TableOfContents }}
+            </section>
+          </div>
+        {{ end }}
+      </aside>
+    </header>
+    <div class="content">
+      {{ .Page.Content }}
+    </div>
+  </article>
 {{ end }}

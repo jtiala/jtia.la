@@ -1,30 +1,28 @@
 <article class="preview">
   <header>
-    <h2>
-      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
-    </h2>
+    <div class="date-and-title">
+      <span class="date">
+        <span class="sr-only">Published on </span>
+        {{ .Page.PublishDate.Format "Jan 2, 2006" }}
+      </span>
+      <h2>
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+      </h2>
+    </div>
+    {{ with .Page.Params.tags }}
     <aside>
-      <div class="date">
-        <ion-icon class="icon" name="calendar" aria-hidden="true"></ion-icon>
-        <span>
-          <span class="sr-only">Published on </span>
-          {{ .Page.PublishDate.Format "Jan 2, 2006" }}
-        </span>
-      </div>
-      {{ with .Page.Params.tags }}
-        <div class="tags">
-          <ion-icon class="icon" name="pricetag" aria-hidden="true"></ion-icon>
-          <h3 class="sr-only">Tags</h3>
-          <ul>
-            {{ range $tag := . }}
-              <li>
-                <a href='{{ "tags/" | relLangURL }}{{ $tag | urlize }}'>{{ $tag }}</a>
-              </li>
-            {{ end }}
-          </ul>
-        </div>
-      {{ end }}
+      <ul>
+        {{ range $tag := . }}
+          <li>
+            <a href='{{ "tags/" | relLangURL }}{{ $tag | urlize }}'>
+              <ion-icon class="icon" name="pricetag" aria-hidden="true"></ion-icon>
+              {{ $tag }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
     </aside>
+    {{ end }}
   </header>
   <div class="content">
     <p>{{ .Page.Summary | htmlUnescape | plainify }}</p>

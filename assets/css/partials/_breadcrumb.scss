@@ -6,7 +6,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 
     li {
       display: flex;
@@ -23,7 +23,7 @@
       }
 
       &:not(:last-child)::after {
-        margin: 0 0.5em;
+        margin: 0 0.5rem;
         content: "/";
       }
     }

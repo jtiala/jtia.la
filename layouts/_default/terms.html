@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <article class="terms">
+  <section class="terms">
     <h1>{{ .Title }}</h1>
-    <ul class="terms-list">
+    <ul>
       {{ range .Data.Terms.ByCount }}
         <li>
           <a href="{{ .Page.Permalink }}">
@@ -16,5 +16,5 @@
         </li>
       {{ end }}
     </ul>
-  </article>
+  </section>
 {{ end }}

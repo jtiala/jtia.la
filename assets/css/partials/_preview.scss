@@ -1,64 +1,74 @@
 .preview {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
 
   header {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
 
-    h2 {
-      line-height: 1.1;
-      margin: 0;
-      color: $lightest-color;
-      font-size: 1.5em;
+    .date-and-title {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
-      a {
+      .date {
+        font-family: "Hepta Slab", serif;
+        color: $light-color;
+        font-size: 0.8rem;
+        font-style: italic;
+        font-weight: normal;
+      }
+
+      h2 {
+        line-height: 1.1;
+        margin: 0;
         color: $lightest-color;
+        font-size: 1.5rem;
 
-        &:hover {
-          color: $primary-lighter-color;
+        a {
+          color: $lightest-color;
+
+          &:hover {
+            color: $primary-lighter-color;
+          }
         }
       }
     }
 
     aside {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5em;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
 
-      .date {
+      ul {
         display: flex;
-        align-items: center;
-        gap: 0.5em;
-        font-size: 0.8em;
-      }
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0.25rem;
+        list-style: none;
+        padding: 0;
+        margin: 0;
 
-      .tags {
-        display: flex;
-        align-items: center;
-        gap: 0.5em;
-        font-size: 0.8em;
-
-        ul {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.2em;
-          list-style: none;
-          padding: 0;
-          margin: 0;
-
-          li {
-            padding: 0 0.6em;
-            font-size: 0.9em;
-            border-radius: 0.2em;
-            white-space: nowrap;
+        li {
+          a {
+            display: inline-flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0 0.6rem;
+            font-size: 0.8rem;
+            border-radius: 0.2rem;
             background: rgba(255, 255, 255, 0.1);
 
             &:hover {
               background: rgba(255, 255, 255, 0.3);
+            }
+
+            .icon {
+              color: $light-color;
             }
           }
         }
@@ -69,7 +79,7 @@
       aside {
         flex-direction: row;
         align-items: center;
-        gap: 1em;
+        gap: 1rem;
       }
     }
   }
@@ -78,7 +88,7 @@
     a {
       display: inline-flex;
       align-items: center;
-      gap: 0.2em;
+      gap: 0.2rem;
     }
   }
 }

@@ -1,21 +1,12 @@
-.post {
+.single {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
 
   header {
     display: flex;
     flex-direction: column;
-    gap: 2em;
-
-    h1 {
-      line-height: 1.1;
-      margin: 0;
-      color: $lightest-color;
-      font-size: 2em;
-      padding-left: 0.5em;
-      border-left: 0.5em solid $primary-color;
-    }
+    gap: 2rem;
 
     aside {
       display: grid;
@@ -23,27 +14,27 @@
       border: 1px dashed rgba(255, 255, 255, 0.3);
       border-left: 0;
       border-right: 0;
-      padding: 0.5em 0;
-      gap: 1em;
-      font-size: 0.8em;
+      padding: 0.5rem 0;
+      gap: 1rem;
+      color: $light-color;
 
       .column {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 1em;
+        gap: 1rem;
 
         section {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          gap: 0.25em;
+          gap: 0.25rem;
 
           .title {
             font-family: "Hepta Slab", serif;
             color: $lightest-color;
             margin: 0;
-            font-size: 1em;
+            font-size: 1rem;
             font-style: italic;
             font-weight: normal;
           }
@@ -52,7 +43,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            gap: 0.25em;
+            gap: 0.25rem;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -62,10 +53,10 @@
                 display: inline-flex;
                 flex-wrap: nowrap;
                 align-items: center;
-                gap: 0.5em;
-                padding: 0 0.6em;
-                font-size: 0.9em;
-                border-radius: 0.2em;
+                gap: 0.5rem;
+                padding: 0 0.6rem;
+                font-size: 0.8rem;
+                border-radius: 0.2rem;
                 background: rgba(255, 255, 255, 0.1);
 
                 &:hover {
@@ -80,15 +71,16 @@
           }
         }
 
-        .table-of-contents ul {
-          list-style-position: outside;
-          margin: 0 1em;
-          list-style-type: "# ";
-          padding-inline-start: 1em;
-        }
+        .table-of-contents {
+          font-size: 0.8rem;
 
-        .table-of-contents nav > ul {
-          padding: 0;
+          ul {
+            list-style-position: outside;
+            margin: 0 1rem;
+            list-style-type: "# ";
+            padding-inline-start: 1rem;
+            padding: 0;
+          }
         }
       }
     }
@@ -96,17 +88,17 @@
     @media (min-width: $desktop-breakpoint) {
       aside {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1em;
+        gap: 1rem;
         padding: 0;
 
         .column {
-          gap: 1em;
-          padding-top: 0.5em;
-          padding-bottom: 0.5em;
+          gap: 1rem;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
 
           &:not(:last-child) {
             border-right: 1px dashed rgba(255, 255, 255, 0.3);
-            padding-right: 1em;
+            padding-right: 1rem;
           }
         }
       }
@@ -114,15 +106,23 @@
   }
 
   .content {
+    h1 {
+      // There shouldn't be h1's in content, make sure they are noticed.
+      background-color: red;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+
     h2 {
-      border-left: 0.5em solid $primary-color;
-      padding-left: 0.5em;
+      border-left: 1rem solid $primary-color;
+      padding-left: 1rem;
+      margin-left: -2rem;
     }
 
     a {
       text-decoration: underline;
       text-decoration-color: $light-color;
-      text-underline-offset: 0.2em;
+      text-underline-offset: 0.2rem;
     }
 
     img {

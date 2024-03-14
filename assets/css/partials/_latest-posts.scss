@@ -2,42 +2,98 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5em;
+  gap: 1.5rem;
   max-width: 32rem;
 
   h2 {
     line-height: 1;
     margin: 0;
-    font-size: 2em;
+    font-size: 1.5rem;
+    color: $lightest-color;
   }
 
-  .posts-list {
+  > ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
 
     > li {
       > article {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 1.5em;
-        gap: 0.5em;
+        padding: 1.5rem;
+        gap: 1.5rem;
         background-color: $dark-color;
-        border-radius: 0.5em;
+        border-radius: 0.5rem;
 
-        aside {
-          font-size: 0.8em;
+        .date-and-title {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          .date {
+            font-family: "Hepta Slab", serif;
+            color: $light-color;
+            font-size: 0.8rem;
+            font-style: italic;
+            font-weight: normal;
+          }
+
+          h3 {
+            margin: 0;
+            color: $lightest-color;
+            font-size: 1.1rem;
+            line-height: 1.5;
+
+            a {
+              color: $lightest-color;
+
+              &:hover {
+                color: $primary-lighter-color;
+              }
+            }
+          }
         }
 
-        h3 {
-          line-height: 1.5;
-          margin: 0;
-          color: $lightest-color;
-          font-size: 1.1em;
+        aside {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          ul {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 0.25rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+              a {
+                display: inline-flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0 0.6rem;
+                font-size: 0.8rem;
+                border-radius: 0.2rem;
+                background: rgba(255, 255, 255, 0.1);
+
+                &:hover {
+                  background: rgba(255, 255, 255, 0.3);
+                }
+
+                .icon {
+                  color: $light-color;
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -47,7 +103,7 @@
     a {
       display: inline-flex;
       align-items: center;
-      gap: 0.2em;
+      gap: 0.2rem;
     }
   }
 }

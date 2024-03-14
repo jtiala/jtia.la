@@ -1,16 +1,32 @@
 <section class="latest-posts">
   <h2>Latest Posts</h2>
-  <ul class="posts-list">
+  <ul>
     {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
       <li>
         <article>
-          <aside>
-            <span class="sr-only">Published on </span>
-            {{ .PublishDate.Format "Jan 2, 2006" }}
-          </aside>
-          <h3>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </h3>
+          <div class="date-and-title">
+            <span class="date">
+              <span class="sr-only">Published on </span>
+              {{ .Page.PublishDate.Format "Jan 2, 2006" }}
+            </span>
+            <h3>
+              <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+          </div>
+          {{ with .Params.tags }}
+            <aside>
+              <ul>
+                {{ range $tag := . }}
+                  <li>
+                    <a href='{{ "tags/" | relLangURL }}{{ $tag | urlize }}'>
+                      <ion-icon class="icon" name="pricetag" aria-hidden="true"></ion-icon>
+                      {{ $tag }}
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </aside>
+          {{ end }}
         </article>
       </li>
     {{ end }}
