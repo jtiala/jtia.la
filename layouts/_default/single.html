@@ -60,7 +60,7 @@
       </aside>
     </header>
     <div class="content">
-      {{ .Page.Content }}
+      {{ .Page.Content | replaceRE "(<h[1-6]\\sid=\"([^\"]+)\"\\s?>)(.+)(</h[1-6]+>)" "${1}${3}<a class='heading-permalink' href='#${2}'><span class='sr-only'>Permalink to ${3}</span><span aria-hidden='true'>#</span></a>${4}" | safeHTML }}
     </div>
   </article>
 {{ end }}
