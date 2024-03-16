@@ -15,10 +15,11 @@
 
       .date {
         font-family: "Hepta Slab", serif;
-        color: $light-color-2;
-        font-size: 0.8rem;
-        font-style: italic;
+        font-optical-sizing: auto;
         font-weight: normal;
+        font-style: italic;
+        font-size: 0.8rem;
+        color: $light-color-2;
       }
 
       h2 {

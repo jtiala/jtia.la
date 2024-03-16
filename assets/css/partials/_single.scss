@@ -32,11 +32,12 @@
 
           .title {
             font-family: "Hepta Slab", serif;
+            font-optical-sizing: auto;
+            font-weight: normal;
+            font-style: italic;
+            font-size: 1rem;
             color: $light-color-1;
             margin: 0;
-            font-size: 1rem;
-            font-style: italic;
-            font-weight: normal;
           }
 
           .link-list {
@@ -128,6 +129,15 @@
 
     img {
       max-width: 100%;
+    }
+
+    .heading-permalink {
+      margin-left: 0.5rem;
+      text-decoration: none;
+      font-weight: normal;
+      font-size: 0.8rem;
+      vertical-align: middle;
+      color: $light-color-3;
     }
   }
 }

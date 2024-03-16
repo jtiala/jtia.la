@@ -10,8 +10,12 @@ html {
 body {
   height: 100%;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
   background: $dark-color-1;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
   color: $light-color-2;
 }
 
@@ -22,6 +26,9 @@ h4,
 h5,
 h6 {
   font-family: "Hepta Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   color: $light-color-1;
 }
 
@@ -37,7 +44,10 @@ a {
 }
 
 code {
-  font-family: monospace, monospace;
+  font-family: "Victor Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
   font-size: 1rem;
   color: $light-color-2;
 }
@@ -49,6 +59,38 @@ pre {
 
   code {
     font-size: 0.8rem;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9em;
+  width: 100%;
+
+  th,
+  td {
+    padding: 0.5rem 1rem;
+  }
+
+  thead {
+    tr {
+      border-bottom: 4px solid $primary-color;
+      background-color: $dark-color-1;
+      color: $light-color-1;
+      text-align: left;
+      font-weight: bolder;
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: $dark-color-3;
+    }
+
+    tr:nth-of-type(even) {
+      background-color: $dark-color-2;
+    }
   }
 }
 
@@ -74,4 +116,11 @@ pre {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  table {
+    width: auto;
+    min-width: 20rem;
+  }
 }
