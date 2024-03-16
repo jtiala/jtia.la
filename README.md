@@ -2,7 +2,7 @@
 
 [![Actions Status][actions-status-badge]][actions-status]
 
-[jtia.la][link] is my personal website. It's built with [Hugo][hugo] and the layout is based on [m10c theme][m10c].
+[jtia.la][link] is my personal website. It's built with [Hugo][hugo] and the layout was based on [m10c theme][m10c], but I think it has been rewritten almost completely.
 
 ## Running locally
 
