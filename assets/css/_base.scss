@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: 2px double $primary-color;
+  outline-offset: 2px;
+}
+
 html {
   height: 100%;
   line-height: 1.6;
@@ -35,11 +40,17 @@ h6 {
 a {
   color: $primary-color;
   text-decoration: none;
-  transition: color 0.35s, background 0.35s;
+  transition-property: color, background, fill, border-color;
+  transition-duration: 0.3s;
 
   &:hover {
     color: $primary-color-light;
-    transition: color 0.25s, background 0.05s;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  a {
+    transition: none;
   }
 }
 

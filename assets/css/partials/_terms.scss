@@ -10,6 +10,11 @@
     > li {
       display: flex;
       flex-flow: column nowrap;
+      align-items: flex-start;
+
+      a {
+        border-radius: 0.2rem;
+      }
     }
   }
 }

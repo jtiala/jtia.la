@@ -1,10 +1,23 @@
 .homepage {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 6rem;
-  padding: 4rem 2rem;
+  gap: 2rem;
   min-height: 100vh;
+
+  > main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem;
+  }
+
+  > aside {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem;
+    background: $dark-color-2;
+  }
 }

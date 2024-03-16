@@ -17,16 +17,20 @@
     {{ template "_internal/opengraph.html" . }}
   </head>
   <body>
-    <main class="{{ if .IsHome }}homepage{{ else }}main{{ end }}">
-      {{ if (not .IsHome) }}
-        {{ partial "breadcrumb.html" . }}
-      {{ end }}
-      {{ block "main" . }}
+    {{ if (.IsHome) }}
+      {{ block "homepage" . }}
         {{ .Content }}
       {{ end }}
-    </main>
-    {{ if (not .IsHome) }}
-      {{ partial "sidebar.html" . }}
+    {{ else }}
+      <main class="main">
+        {{ partial "breadcrumb.html" . }}
+        {{ block "main" . }}
+          {{ .Content }}
+        {{ end }}
+      </main>
+      <aside class="sidebar">
+        {{ partial "sidebar.html" . }}
+      </aside>
     {{ end }}
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

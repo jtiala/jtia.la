@@ -30,6 +30,7 @@
 
         a {
           color: $light-color-1;
+          border-radius: 0.2rem;
 
           &:hover {
             color: $primary-color;
@@ -64,6 +65,16 @@
               background: $dark-color-4;
             }
 
+            &:focus {
+              background: $primary-color;
+              outline: none;
+              color: $dark-color-1;
+
+              .icon {
+                color: $dark-color-3;
+              }
+            }
+
             .icon {
               color: $light-color-2;
             }
@@ -86,6 +97,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.2rem;
+      border-radius: 0.2rem;
     }
   }
 }

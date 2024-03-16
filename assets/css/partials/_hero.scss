@@ -2,7 +2,8 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  gap: 1.5em;
+  align-items: center;
+  gap: 3em;
   max-width: 32rem;
 
   .title {
@@ -11,6 +12,7 @@
     font-size: 2rem;
 
     a {
+      border-radius: 0.2rem;
       color: $light-color-1;
 
       &:hover {
@@ -35,19 +37,21 @@
     .details {
       display: flex;
       flex-flow: column nowrap;
-      gap: 0.5rem;
+      align-items: center;
+      gap: 0.25rem;
     }
+  }
 
-    .social {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      font-size: 2rem;
-      color: $light-color-1;
+  .social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    color: $light-color-1;
 
-      a {
-        line-height: 1;
-      }
+    a {
+      display: inline-flex;
+      border-radius: 0.2rem;
     }
   }
 }

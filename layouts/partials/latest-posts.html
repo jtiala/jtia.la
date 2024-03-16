@@ -4,29 +4,13 @@
     {{ range ( where .Site.RegularPages "Type" "posts" | first 3 ) }}
       <li>
         <article>
-          <div class="date-and-title">
-            <span class="date">
-              <span class="sr-only">Published on </span>
-              {{ .Page.PublishDate.Format "Jan 2, 2006" }}
-            </span>
-            <h3>
-              <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h3>
-          </div>
-          {{ with .Params.tags }}
-            <aside>
-              <ul>
-                {{ range $tag := . }}
-                  <li>
-                    <a href='{{ "tags/" | relLangURL }}{{ $tag | urlize }}'>
-                      <ion-icon class="icon" name="pricetag" aria-hidden="true"></ion-icon>
-                      {{ $tag }}
-                    </a>
-                  </li>
-                {{ end }}
-              </ul>
-            </aside>
-          {{ end }}
+          <span class="date">
+            <span class="sr-only">Published on </span>
+            {{ .Page.PublishDate.Format "Jan 2, 2006" }}
+          </span>
+          <h3>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </h3>
         </article>
       </li>
     {{ end }}

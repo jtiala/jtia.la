@@ -1,4 +1,10 @@
-{{ define "main" }}
-  {{ partial "hero.html" (dict "Page" . "homepage" true) }}
-  {{ partial "latest-posts.html" . }}
+{{ define "homepage" }}
+<div class="homepage">
+  <main>
+    {{ partial "hero.html" (dict "Page" . "homepage" true) }}
+  </main>
+  <aside>
+    {{ partial "latest-posts.html" . }}
+  </aside>
+</div>
 {{ end }}
