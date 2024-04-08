@@ -65,7 +65,7 @@
                   background: $dark-color-4;
                 }
 
-                &:focus {
+                &:focus-visible {
                   background: $primary-color;
                   outline: none;
                   color: $dark-color-1;
@@ -167,7 +167,7 @@
         background-color: $dark-color-4;
       }
 
-      &:focus {
+      &:focus-visible {
         background-color: $primary-color;
         color: $dark-color-1;
         outline: none;

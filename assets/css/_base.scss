@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-*:focus {
+*:focus-visible {
   outline: 2px double $primary-color;
   outline-offset: 2px;
 }
