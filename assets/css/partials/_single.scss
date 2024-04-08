@@ -148,6 +148,16 @@
       max-width: 100%;
     }
 
+    code {
+      background-color: $dark-color-3;
+      padding: 0 0.2rem;
+    }
+
+    pre code {
+      background-color: unset;
+      padding: unset;
+    }
+
     .heading-permalink {
       display: inline-flex;
       justify-content: center;
