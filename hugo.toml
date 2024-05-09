@@ -20,8 +20,8 @@ paginate = 5
     icon = "logo-github"
     url = "https://github.com/jtiala"
   [[params.socialLinks]]
-    name = "Twitter"
-    icon = "logo-twitter"
+    name = "X"
+    icon = "logo-x"
     url = "https://twitter.com/tjiala"
   [[params.socialLinks]]
     name = "LinkedIn"
