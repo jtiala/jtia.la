@@ -18,7 +18,7 @@
   <div class="social">
     {{ range .Page.Site.Params.socialLinks }}
       <a href="{{ .url }}" target="_blank" rel="noreferrer noopener">
-        <ion-icon class="icon" name="{{ .icon }}" aria-label="{{ .name }}"></ion-icon>
+        <iconify-icon icon="{{ .icon | safeURL }}" aria-label="{{ .name }}"></iconify-icon>
       </a>
     {{ end }}
   </div>

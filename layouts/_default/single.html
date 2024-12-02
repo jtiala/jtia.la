@@ -25,7 +25,7 @@
                 {{ range $tag := . }}
                   <li>
                     <a href='{{ "tags/" | relLangURL }}{{ $tag | urlize }}'>
-                      <ion-icon class="icon" name="pricetag" aria-hidden="true"></ion-icon>
+                      <iconify-icon icon='{{ "fa6-solid:tag" | safeURL }}' aria-hidden="true"></iconify-icon>
                       {{ $tag }}
                     </a>
                   </li>
@@ -40,7 +40,7 @@
                 {{ range .Page.Params.links }}
                   <li>
                     <a href="{{ .url }}" target="_blank">
-                      <ion-icon class="icon" name='{{ or .icon "arrow-forward" }}' aria-hidden="true"></ion-icon>
+                      <iconify-icon icon='{{ or .icon "fa6-solid:link" | safeURL }}' aria-hidden="true"></iconify-icon>
                       {{ .title }}
                     </a>
                   </li>

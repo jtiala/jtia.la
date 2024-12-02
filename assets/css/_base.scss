@@ -115,7 +115,10 @@ table {
   color: $dark-color-2;
 }
 
-.icon {
+iconify-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
   flex-shrink: 0;
 }
 

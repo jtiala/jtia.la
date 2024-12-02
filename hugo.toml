@@ -17,19 +17,23 @@ paginate = 5
 
   [[params.socialLinks]]
     name = "GitHub"
-    icon = "logo-github"
+    icon = "fa6-brands:github"
     url = "https://github.com/jtiala"
   [[params.socialLinks]]
+    name = "Bluesky"
+    icon = "fa6-brands:bluesky"
+    url = "https://bsky.app/profile/jtia.la"
+  [[params.socialLinks]]
     name = "X"
-    icon = "logo-x"
+    icon = "fa6-brands:x-twitter"
     url = "https://twitter.com/tjiala"
   [[params.socialLinks]]
     name = "LinkedIn"
-    icon = "logo-linkedin"
+    icon = "fa6-brands:linkedin"
     url = "https://linkedin.com/in/jtiala"
   [[params.socialLinks]]
     name = "Email"
-    icon = "mail"
+    icon = "fa6-solid:at"
     url = "mailto:joonas.tiala@gmail.com"
 
 [markup]

@@ -5,7 +5,7 @@
         {{ with .Prev }}
           <li>
             <a href="{{ .URL }}">
-              <ion-icon class="icon" name="arrow-back" aria-label="Previous page"></ion-icon>
+              <iconify-icon icon='{{ "fa6-solid:arrow-left" | safeURL }}' aria-label="Previous page"></iconify-icon>
             </a>
           </li>
         {{ end }}
@@ -20,7 +20,7 @@
         {{ with .Next }}
           <li>
             <a href="{{ .URL }}">
-              <ion-icon class="icon" name="arrow-forward" aria-label="Next page"></ion-icon>
+              <iconify-icon icon='{{ "fa6-solid:arrow-right" | safeURL }}' aria-label="Next page"></iconify-icon>
             </a>
           </li>
         {{ end }}

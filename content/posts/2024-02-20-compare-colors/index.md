@@ -10,7 +10,7 @@ tags:
 links:
   - url: https://github.com/jtiala/compare-colors
     title: See repository on GitHub
-    icon: logo-github
+    icon: "fa6-brands:github"
   - url: https://jtiala.github.io/compare-colors
     title: Check out the app
 ---
