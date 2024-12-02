@@ -159,28 +159,62 @@
     }
 
     .heading-permalink {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 1.25rem;
-      height: 1.25rem;
-      margin-left: 0.5rem;
-      text-decoration: none;
-      font-weight: normal;
-      font-size: 0.8rem;
-      vertical-align: middle;
+      position: absolute;
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      border-width: 0;
+      margin: -1px;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
       color: $light-color-2;
-      border-radius: 100%;
       background-color: $dark-color-3;
+    }
 
-      &:hover {
-        background-color: $dark-color-4;
-      }
+    h1:focus,
+    h1:hover,
+    h2:focus,
+    h2:hover,
+    h3:focus,
+    h3:hover,
+    h4:focus,
+    h4:hover,
+    h5:focus,
+    h5:hover,
+    h6:focus,
+    h6:hover {
+      .heading-permalink {
+        position: static;
+        overflow: visible;
+        padding: initial;
+        border-width: initial;
+        margin: initial;
+        clip: auto;
+        white-space: normal;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-left: 0.5rem;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 0.8rem;
+        vertical-align: middle;
+        color: $light-color-2;
+        border-radius: 100%;
+        background-color: $dark-color-3;
 
-      &:focus-visible {
-        background-color: $primary-color;
-        color: $dark-color-1;
-        outline: none;
+        &:hover {
+          background-color: $dark-color-4;
+        }
+
+        &:focus-visible {
+          background-color: $primary-color;
+          color: $dark-color-1;
+          outline: none;
+        }
       }
     }
   }
